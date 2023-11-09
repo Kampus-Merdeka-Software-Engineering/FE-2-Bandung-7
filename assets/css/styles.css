@@ -696,3 +696,31 @@ img {
 .footer .credit {
   font-size: 0.8rem;
 }
+
+
+/* ================media Query================== */
+/* Responsive design for tablets */
+@media screen and (max-width: 768px) {
+  .contact .row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact .row .map,
+  .contact .row .content,
+  .contact .row form {
+    width: 100%;
+    flex: 1 1 9rem;
+  }
+
+  .contact .row form {
+    padding-left: 0;
+  }
+}
+
+/* Responsive design for mobile devices */
+@media screen and (max-width: 480px) {
+  .contact .row form {
+    padding-left: 0;
+  }
+}
