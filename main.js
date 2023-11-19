@@ -59,16 +59,16 @@ sr.reveal(`.popular__card`, { interval: 200 })
 
 // ================================================== contact us ============================================================
 // mengambil form element 
-const formElement = document.getElementById("#input-form");
+const formElement = document.getElementById("input-form");
 // menambhakan form event listener 
 formElement.addEventListener("submit", (event) => {
     event.preventDefault();// biar tidak mereflesh 
     // ambil input elemnt di html
-    const inputElementName = document.getElementById("#input-name")
+    const inputElementName = document.getElementById("input-name")
     console.log(inputElementName.value);
-    const inputElementEmail = document.getElementById("#input-email")
+    const inputElementEmail = document.getElementById("input-email")
     console.log(inputElementEmail.value);
-    const inputElementMessage = document.getElementById("#input-message")
+    const inputElementMessage = document.getElementById("input-message")
     console.log(inputElementMessage.value);
     // mengahapus input value setelah submit 
     inputElementName.value = "";
