@@ -65,11 +65,11 @@ formElement.addEventListener("submit", (event) => {
     event.preventDefault();// biar tidak mereflesh 
     // ambil input elemnt di html
     const inputElementName = document.getElementById("input-name")
-    console.log(inputElementName.value);
+    inputElementName.value;
     const inputElementEmail = document.getElementById("input-email")
-    console.log(inputElementEmail.value);
+    inputElementEmail.value;
     const inputElementMessage = document.getElementById("input-message")
-    console.log(inputElementMessage.value);
+    inputElementMessage.value;
     // mengahapus input value setelah submit 
     inputElementName.value = "";
     inputElementEmail.value = "";
