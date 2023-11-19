@@ -54,3 +54,22 @@ sr.reveal(`.home__card`, { delay: 600, distance: '100px', interval: 100 })
 sr.reveal(`.about__data, .join__image`, { origin: 'right' })
 sr.reveal(`.about__image, .join__data`, { origin: 'left' })
 sr.reveal(`.popular__card`, { interval: 200 })
+
+
+
+// ================================================== contact us ============================================================
+// mengambil form element 
+const formElement = document.querySelector(".contact .row form");
+// menambhakan form event listener 
+formElement.addEventListener("submit", (event) => {
+    event.preventDefault();// biar tidak mereflesh 
+    // ambil input elemnt di html
+    const inputElement = document.querySelector(".contact .row form .input-group input")
+    console.log(inputElement.value);
+    const inputElementmes = document.querySelector(".contact .row form .input-group-mess textarea")
+    console.log(inputElementmes.value);
+    // mengahapus input value setelah submit 
+    inputElement.value = "";
+    inputElementmes.value = "";
+})
+
