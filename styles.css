@@ -526,7 +526,7 @@ img {
   }
 
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1000px) {
   .contact .row {
     flex-direction: column;
     align-items: center;
