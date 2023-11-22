@@ -242,7 +242,7 @@ img {
   top: 0;
   left: 0;
   width: 100%;
-  height: 750px;
+  height: 700px;
   object-fit: cover;
   object-position: center;
 }
@@ -252,7 +252,7 @@ img {
   top: 0;
   left: 0;
   width: 100%;
-  height: 800px;
+  height: 700px;
   background: linear-gradient(180deg,
       hsla(0, 0%, 0%, 0) 58%,
       hsl(0, 0%, 0%) 78%);
@@ -305,6 +305,7 @@ img {
 
 /*=============== ABOUT ===============*/
 .about__container {
+  margin-top: 200px;
   row-gap: 3rem;
 }
 
@@ -457,6 +458,30 @@ img {
   }
 
 }
+@media screen and (max-width: 480px) {
+  .contact .row .map{
+    margin-left: 30px;
+  }
+  .contact .row form {
+    padding-left: 1rem;
+  }
+
+  .contact .row form .input-group {
+    width: 300px;
+  }
+
+  .contact .row form .input-group-mess textarea {
+    width: 300px;
+  }
+
+  .contact .row form .input-group input {
+    width: 300px;
+  }
+  .contact .row form .btn {
+    padding-left: 20px ;
+    margin-left: 100px;
+  }
+}
 
 @media screen and (min-width: 768px) {
 
@@ -500,6 +525,23 @@ img {
     grid-template-columns: repeat(3, 240px);
   }
 
+}
+@media screen and (max-width: 768px) {
+  .contact .row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact .row .map,
+  .contact .row .content,
+  .contact .row form {
+    width: 100%;
+    flex: 1 1 9rem;
+  }
+
+  .contact .row form {
+    padding-left: 0;
+  }
 }
 
 @media screen and (min-width: 1152px) {
@@ -690,6 +732,9 @@ img {
   border: #fff solid;
 
 }
+.contact .row form .btn:hover{
+color: #555659;
+}
 
 
 /* ================footer================ */
@@ -727,50 +772,4 @@ img {
 .footer .credit {
   font-size: 0.8rem;
   color: #fff;
-}
-
-
-/* ================media Query================== */
-@media screen and (max-width: 768px) {
-  .contact .row {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .contact .row .map,
-  .contact .row .content,
-  .contact .row form {
-    width: 100%;
-    flex: 1 1 9rem;
-  }
-
-  .contact .row form {
-    padding-left: 0;
-  }
-}
-
-/* Responsive design for mobile devices */
-@media screen and (max-width: 480px) {
-  .contact .row .map{
-    margin-left: 30px;
-  }
-  .contact .row form {
-    padding-left: 1rem;
-  }
-
-  .contact .row form .input-group {
-    width: 300px;
-  }
-
-  .contact .row form .input-group-mess textarea {
-    width: 300px;
-  }
-
-  .contact .row form .input-group input {
-    width: 300px;
-  }
-  .contact .row form .btn {
-    padding-left: 20px ;
-    margin-left: 100px;
-  }
 }
