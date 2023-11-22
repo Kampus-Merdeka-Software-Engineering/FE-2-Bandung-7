@@ -70,19 +70,12 @@ const scrollActive = () => {
 }
 
 // ================================================== contact us ============================================================
-// mengambil form element 
 const formElement = document.getElementById("input-form");
-// menambhakan form event listener 
 formElement.addEventListener("submit", (event) => {
-    event.preventDefault();// biar tidak mereflesh 
-    // ambil input elemnt di html
+    event.preventDefault();
     const inputElementName = document.getElementById("input-name")
-    inputElementName.value;
     const inputElementEmail = document.getElementById("input-email")
-    inputElementEmail.value;
     const inputElementMessage = document.getElementById("input-message")
-    inputElementMessage.value;
-    // mengahapus input value setelah submit 
     inputElementName.value = "";
     inputElementEmail.value = "";
     inputElementMessage.value = "";
