@@ -458,30 +458,7 @@ img {
   }
 
 }
-@media screen and (max-width: 480px) {
-  .contact .row .map{
-    margin-left: 30px;
-  }
-  .contact .row form {
-    padding-left: 1rem;
-  }
 
-  .contact .row form .input-group {
-    width: 300px;
-  }
-
-  .contact .row form .input-group-mess textarea {
-    width: 300px;
-  }
-
-  .contact .row form .input-group input {
-    width: 300px;
-  }
-  .contact .row form .btn {
-    padding-left: 20px ;
-    margin-left: 100px;
-  }
-}
 
 @media screen and (min-width: 768px) {
 
@@ -535,14 +512,17 @@ img {
   .contact .row .map,
   .contact .row .content,
   .contact .row form {
-    width: 100%;
+    
+    width: 50%;
     flex: 1 1 9rem;
+    align-items: center;
   }
 
   .contact .row form {
     padding-left: 0;
   }
 }
+
 
 @media screen and (min-width: 1152px) {
   .container {
@@ -732,8 +712,9 @@ img {
   border: #fff solid;
 
 }
-.contact .row form .btn:hover{
-color: #555659;
+
+.contact .row form .btn:hover {
+  color: #555659;
 }
 
 
@@ -764,6 +745,7 @@ color: #555659;
   margin-bottom: 1.4rem;
 }
 
+
 .footer .links a {
   color: #fff;
   padding: 0.7rem 1rem;
@@ -772,4 +754,73 @@ color: #555659;
 .footer .credit {
   font-size: 0.8rem;
   color: #fff;
+}
+
+/* ===================== Responsive contact us ======================================= */
+@media screen and (max-width: 700px) {
+  .contact {
+    font-size: smaller;
+  }
+
+  .contact .row .map {
+    display: flex;
+    justify-content: center;
+    margin-left: 0;
+    width: 1px;
+    height: 20px;
+  }
+
+  .contact .row .content {
+    text-align: center;
+    font-size: 1em;
+
+  }
+
+  .contact .row .content h3 {
+    font-size: 1.5em;
+  }
+
+  .contact .row form .input-group {
+    width: 200px;
+    margin-left: 15px;
+    height: 50px;
+  }
+
+  .contact .row form .input-group input {
+    width: 200px;
+    height: 50px;
+    font-size: 1.2em;
+    display: inline;
+    justify-content: center;
+  }
+
+  .contact .row form .input-group-mess textarea {
+    width: 200px;
+    margin-left: 15px;
+    height: 150px;
+    font-size: 1.2em;
+  }
+  .contact .row form .btn {
+    margin-left: 70px;
+    font-size: 1.5em;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .contact .row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact .row .map,
+  .contact .row .content,
+  .contact .row form {
+    
+    width: 50%;
+    flex: 1 1 9rem;
+    align-items: center;
+  }
+
+  .contact .row form {
+    padding-left: 0;
+  }
 }
