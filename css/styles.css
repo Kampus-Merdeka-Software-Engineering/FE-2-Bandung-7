@@ -718,7 +718,7 @@ img {
 }
 
 
-/* ================footer================ */
+/* =================footer================= */
 .footer {
   background-color: var(--primary);
   text-align: center;
@@ -756,7 +756,7 @@ img {
   color: #fff;
 }
 
-/* ===================== Responsive contact us ======================================= */
+/* ====== Responsive contact us ======= */
 @media screen and (max-width: 700px) {
   .contact {
     font-size: smaller;
