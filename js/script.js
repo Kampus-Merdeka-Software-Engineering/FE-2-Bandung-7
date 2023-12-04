@@ -69,7 +69,7 @@ const scrollActive = () => {
     })
 }
 
-// ================================================== contact us ============================================================
+// ==================== contact us ============================
 const formElement = document.getElementById("input-form");
 formElement.addEventListener("submit", (event) => {
     event.preventDefault();
