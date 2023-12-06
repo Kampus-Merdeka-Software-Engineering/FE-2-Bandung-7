@@ -1,7 +1,7 @@
 /*=============== SHOW MENU ===============*/
 const navMenu = document.getElementById('nav-menu'),
     navToggle = document.getElementById('nav-toggle'),
-    navClose = document.getElementById('nav-close')
+    navClose = document.getElementById('nav-close');
 
 /*===== MENU SHOW =====*/
 /* Validate if constant exists */
@@ -70,14 +70,44 @@ const scrollActive = () => {
 }
 
 // ==================== contact us ============================
-const formElement = document.getElementById("input-form");
-formElement.addEventListener("submit", (event) => {
+const API_URL = "http://localhost:3000";
+document.getElementById('input-form').addEventListener('submit', async function (event) {
     event.preventDefault();
-    const inputElementName = document.getElementById("input-name")
-    const inputElementEmail = document.getElementById("input-email")
-    const inputElementMessage = document.getElementById("input-message")
-    inputElementName.value = "";
-    inputElementEmail.value = "";
-    inputElementMessage.value = "";
-})
+
+    let name = document.getElementById('input-name').value;
+    let email = document.getElementById('input-email').value;
+    let message = document.getElementById('input-message').value;
+
+    let data = {
+        name: name,
+        email: email,
+        message: message
+    };
+
+    try {
+        const response = await fetch(`${API_URL}/messages`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(data),
+        });
+        
+        const jsonData = await response.json();
+        console.log('Success:', jsonData);
+        // Empty the form
+        document.getElementById('input-name').value = '';
+        document.getElementById('input-email').value = '';
+        document.getElementById('input-message').value = '';
+
+    } catch (error) {
+        console.error('Error:', error);
+    }
+});
+
+
+// const btn = document.getElementById('btn');
+// btn.addEventListener('click',function(){
+//     Swal.fire("SweetAlert2 is working!");
+// })
 
