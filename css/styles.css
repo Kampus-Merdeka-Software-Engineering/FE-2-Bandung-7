@@ -678,7 +678,7 @@ img {
 }
 
 .contact .row form .input-group input {
-  width: 100;
+  width: 100px;
   padding: 1rem;
   font-size: 1.3rem;
   background: none;
@@ -819,7 +819,7 @@ img {
   }
 
   .contact .row form .input-group-mess textarea {
-    width: 230px;
+    width: 200px;
     margin-left: 15px;
     height: 150px;
     font-size: 1.2em;
