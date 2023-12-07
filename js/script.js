@@ -70,7 +70,7 @@ const scrollActive = () => {
 }
 
 // =====================destinations============================
-swiper
+// swiper
 var swiper = new Swiper(".mySwiper", {
     spaceBetween: 10,
     slidesPerView: 4,
@@ -89,8 +89,8 @@ var swiper2 = new Swiper(".mySwiper2", {
     },
 })
 
-
-const API_URL = "be-2-bandung-7-production.up.railway.app";
+// ======= Other Destination =============
+const API_URL = "https://be-2-bandung-7-production.up.railway.app";
 fetch(`${API_URL}/destinations`)
     .then(response => response.json())
     .then(data => {
