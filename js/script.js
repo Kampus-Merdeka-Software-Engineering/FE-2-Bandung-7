@@ -162,27 +162,47 @@ document.getElementById('input-form').addEventListener('submit', async function 
     };
 
     try {
-        fetch(`${API_URL}/messages`, {
+        const response = await fetch(`${API_URL}/messages`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
             },
             body: JSON.stringify(data),
         });
-        // const jsonData = await response.json();
 
-        Swal.fire({
-            title: "success!",
-            text: "Message successfully sent!",
-            icon: "success"
-        });
-        // Empty the form
-        document.getElementById('input-name').value = '';
-        document.getElementById('input-email').value = '';
-        document.getElementById('input-message').value = '';
+        if (response.ok) {
+            // If the response status is in the range 200-299
+            const jsonData = await response.json();
 
+            Swal.fire({
+                title: "Success!",
+                text: "Message successfully sent!",
+                icon: "success"
+            });
+
+            // Empty the form
+            document.getElementById('input-name').value = '';
+            document.getElementById('input-email').value = '';
+            document.getElementById('input-message').value = '';
+        } else {
+            // If the response status is not in the range 200-299
+            const errorData = await response.json();
+            console.error('Error:', errorData);
+
+            Swal.fire({
+                title: "Error!",
+                text: errorData.message || "Failed to send message. Please try again later.",
+                icon: "error"
+            });
+        }
     } catch (error) {
         console.error('Error:', error);
+
+        Swal.fire({
+            title: "Error!",
+            text: "An unexpected error occurred. Please try again later.",
+            icon: "error"
+        });
     }
 });
 
