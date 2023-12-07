@@ -70,8 +70,27 @@ const scrollActive = () => {
 }
 
 // =====================destinations============================
+swiper
+var swiper = new Swiper(".mySwiper", {
+    spaceBetween: 10,
+    slidesPerView: 4,
+    freeMode: true,
+    watchSlidesProgress: true,
+  });
+  var swiper2 = new Swiper(".mySwiper2", {
+    loop: true,
+    spaceBetween: 10,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    thumbs: {
+      swiper: swiper,
+    },
+  })
 
-const API_URL = "http://localhost:3000";
+
+const API_URL = "be-2-bandung-7-production.up.railway.app";
 fetch(`${API_URL}/destinations`)
     .then(response => response.json())
     .then(data => {
@@ -164,6 +183,8 @@ document.getElementById('input-form').addEventListener('submit', async function 
         console.error('Error:', error);
     }
 });
+
+
 
 
 

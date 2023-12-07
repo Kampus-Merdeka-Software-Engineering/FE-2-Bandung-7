@@ -10,6 +10,14 @@
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
     <!--=============== CSS ===============-->
     <link rel="stylesheet" href="./css/styles.css">
+    <!-- ============swiper================= -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    
+
+
+
+
+
     <title>Holidayuk!</title>
 </head>
 
@@ -101,14 +109,56 @@
                     <div class="about__shadow"></div>
                 </div>
             </div>
-        </section>
+        </section><br>
 
         <!--==================== Desnitaion ====================-->
-        <section class="destination section" id="destination">
+        <section class="destination_section" id="destination">
             <h2 class="section__title">
                 Destination
-            </h2>
+            </h2><br>
+            <h4>3 Most Popular Destinations</h4>
+            <!-- Swiper -->
+            <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper mySwiper2">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img
+                            src="https://images.unsplash.com/photo-1613382237354-eaebbebe6eba?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" height="20px" width="100px" />
+                            <h6>Raja Ampat <br>Papua</h6>
+                    </div>
+                    
+                    <div class="swiper-slide">
+                        <img src="https://images.unsplash.com/photo-1677809722038-83012c25561f?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
+                        <h6>Gili Trawangan<br>NTB</h6>
+                       
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="https://images.unsplash.com/photo-1549144511-f099e773c147?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
+                        <h6>Paris<br>Prancis</h6>
+                    </div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+            <div thumbsSlider="" class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img
+                            src="https://images.unsplash.com/photo-1613382237354-eaebbebe6eba?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" height="20px" width="100px" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="https://images.unsplash.com/photo-1677809722038-83012c25561f?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="https://images.unsplash.com/photo-1549144511-f099e773c147?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
+                    </div>
 
+                </div>
+            </div>
+
+
+            <div class="title_other_des">
+                <h3>Other Destinations</h3>
+            </div>
             <div class="destination__container container grid">
                 <article class="destination__card">
                     <div class="destination__image">
@@ -166,6 +216,7 @@
                         <i class="ri-map-pin-line"></i>
                         <span class="kota4"></span>
                     </div>
+                    <p></p>
                 </article>
 
                 <article class="destination__card">
@@ -254,6 +305,7 @@
             </div>
         </footer>
 
+
         <!--========== SCROLL UP ==========-->
         <a href="#" class="scrollup" id="scroll-up">
             <i class="ri-arrow-up-line"></i>
@@ -261,10 +313,10 @@
 
         <!-- ========sweetalert2================== -->
         <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
+        <!-- =================swiper==================================== -->
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
         <!--=============== MAIN JS ===============-->
         <script src="./js/script.js"></script>
-
 </body>
 
 </html>
