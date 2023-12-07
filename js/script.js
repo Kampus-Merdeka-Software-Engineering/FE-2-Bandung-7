@@ -76,18 +76,18 @@ var swiper = new Swiper(".mySwiper", {
     slidesPerView: 4,
     freeMode: true,
     watchSlidesProgress: true,
-  });
-  var swiper2 = new Swiper(".mySwiper2", {
+});
+var swiper2 = new Swiper(".mySwiper2", {
     loop: true,
     spaceBetween: 10,
     navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
     },
     thumbs: {
-      swiper: swiper,
+        swiper: swiper,
     },
-  })
+})
 
 
 const API_URL = "be-2-bandung-7-production.up.railway.app";
@@ -162,13 +162,15 @@ document.getElementById('input-form').addEventListener('submit', async function 
     };
 
     try {
-        const response = await fetch(`${API_URL}/messages`, {
+        fetch(`${API_URL}/messages`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
             },
             body: JSON.stringify(data),
         });
+        // const jsonData = await response.json();
+
         Swal.fire({
             title: "success!",
             text: "Message successfully sent!",
