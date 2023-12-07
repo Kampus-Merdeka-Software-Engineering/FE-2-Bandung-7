@@ -71,13 +71,13 @@ const scrollActive = () => {
 
 // =====================destinations============================
 // swiper
-var swiper = new Swiper(".mySwiper", {
+const swiper = new Swiper(".mySwiper", {
     spaceBetween: 10,
     slidesPerView: 4,
     freeMode: true,
     watchSlidesProgress: true,
 });
-var swiper2 = new Swiper(".mySwiper2", {
+const swiper2 = new Swiper(".mySwiper2", {
     loop: true,
     spaceBetween: 10,
     navigation: {
