@@ -10,8 +10,8 @@
   --title-color: hsl(0, 0%, 95%);
   --text-color: hsl(0, 0%, 70%);
   --text-color-light: hsl(0, 0%, 60%);
-  --body-color: hsl(0, 0%, 0%);
-  --container-color: hsl(0, 0%, 8%);
+  --body-color:#0c0b0b;
+  --container-color:#586069;
 
   /*========== Font and typography ==========*/
   /*.5rem = 8px | 1rem = 16px ...*/
@@ -163,7 +163,7 @@ img {
     position: fixed;
     top: -100%;
     left: 0;
-    background-color: hsla(0, 0%, 0%, 0.3);
+    background-color: #0c0b0b;
     width: 100%;
     padding-block: 4rem;
     backdrop-filter: blur(24px);
@@ -219,7 +219,7 @@ img {
   position: absolute;
   width: 1000%;
   height: 100%;
-  background-color: hsla(0, 0%, 0%, 0.3);
+  background-color: hsla(#0c0b0b);
   backdrop-filter: blur(24px);
   -webkit-backdrop-filter: blur(24px);
   top: 0;
@@ -255,7 +255,7 @@ img {
   height: 700px;
   background: linear-gradient(180deg,
       hsla(0, 0%, 0%, 0) 58%,
-      hsl(0, 0%, 0%) 78%);
+      hsl(#0c0b0b) 78%);
 }
 
 .home__container {
@@ -336,7 +336,7 @@ img {
   height: 100%;
   background: linear-gradient(180deg,
       hsla(0, 0%, 0%, 0) 50%,
-      hsl(0, 0%, 0%) 125%);
+      hsl(0, 0%, 2%) 125%);
 }
 
 .about__image:hover .about__img {
@@ -910,6 +910,7 @@ img {
   .contact .row form .btn {
     margin-left: 70px;
     font-size: 1.5em;
+    background-color: #0c0b0b;
   }
 }
 
