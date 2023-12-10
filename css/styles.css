@@ -255,7 +255,8 @@ img {
   height: 700px;
   background: linear-gradient(180deg,
       hsla(0, 0%, 0%, 0) 58%,
-      hsl(#0c0b0b) 78%);
+      hwb(0 3% 96%) 78%);
+      
 }
 
 .home__container {
